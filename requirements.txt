@@ -1,0 +1,7 @@
+numpy~=1.20.2
+imageio~=2.9.0
+torch~=1.9.0+cu111
+opencv-python~=4.5.1.48
+matplotlib~=3.4.2
+tqdm~=4.62.0
+dv~=1.0.10
