@@ -1,5 +1,5 @@
 # E<sup>2</sup>NeRF: Event Enhanced Neural Radiance Fields from Blurry Images
-
+Click [here](https://icvteam.github.io/E2NeRF.html) to see the video and supplementary materials in our project website. 
 ## Code
 The code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch).
 
