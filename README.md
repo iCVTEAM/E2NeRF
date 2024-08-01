@@ -2,7 +2,7 @@
 Click [here](https://icvteam.github.io/E2NeRF.html) to see the video and supplementary materials in our project website. 
 
 ![](./figure.png)
-## Code
+## Installation
 The code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch).
 Please refer to [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) for the environment installation.
 
