@@ -38,3 +38,23 @@ We update the EDI code in the repository.
 You can use this code to deblur the images in the "train" file with corresponding events.pt data.
 And the deblurred images are saved at "images_for_colmap" file.
 Then, you can use colmap to generate the poses as in NeRF.
+
+
+
+## Citation
+
+If you find this useful, please consider citing our paper:
+
+```bibtex
+@inproceedings{qi2023e2nerf,
+  title={E2nerf: Event enhanced neural radiance fields from blurry images},
+  author={Qi, Yunshan and Zhu, Lin and Zhang, Yu and Li, Jia},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={13254--13264},
+  year={2023}
+}
+```
+
+## Acknowledgment
+
+The overall framework are derived from [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch/). We appreciate the effort of the contributors to these repositories.
