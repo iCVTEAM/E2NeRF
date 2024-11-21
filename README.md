@@ -1,5 +1,5 @@
 # Code for E<sup>2</sup>NeRF: Event Enhanced Neural Radiance Fields from Blurry Images (ICCV 2023)
-Click [here](https://icvteam.github.io/E2NeRF.html) to see the video and supplementary materials in our project website. 
+This is an official PyTorch implementation of the E<sup>2</sup>NeRF. Click [here](https://icvteam.github.io/E2NeRF.html) to see the video and supplementary materials in our project website. 
 
 ![](./figure.png)
 ## Installation
