@@ -11,7 +11,7 @@ Please refer to [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) for t
 
 ## Dataset
 Download the dataset [here](https://drive.google.com/drive/folders/1XhOEp4UdLL7EnDNyWdxxX8aRvzF53fWo?usp=sharing).
-The dataset contains "data" for training and "original data"
+The dataset contains the "data" for training and the "original data".
 
 ### Data
 #### Synthetic Data: 
