@@ -7,7 +7,7 @@ This is an official PyTorch implementation of the E<sup>2</sup>NeRF. Click [here
 
 ## Installation
 The code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch).
-Please refer to [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) for the environment installation.
+Please refer to its github [website](https://github.com/yenchenlin/nerf-pytorch) for the environment installation.
 
 ## Dataset
 Download the dataset [here](https://drive.google.com/drive/folders/1XhOEp4UdLL7EnDNyWdxxX8aRvzF53fWo?usp=sharing).
