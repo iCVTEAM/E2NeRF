@@ -1,13 +1,42 @@
 # Code for E<sup>2</sup>NeRF: Event Enhanced Neural Radiance Fields from Blurry Images (ICCV 2023)
 This is an official PyTorch implementation of the E<sup>2</sup>NeRF. Click [here](https://icvteam.github.io/E2NeRF.html) to see the video and supplementary materials in our project website. 
 
+
+
 ## Method Overview
 
 ![](./figure.png)
 
+
+
 ## Installation
 The code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) and use the same environment.
 Please refer to its github [website](https://github.com/yenchenlin/nerf-pytorch) for the environment installation.
+
+
+
+## Code
+
+### Synthetic Data
+
+The configs of the synthetic data are in the config_synthetic.txt file. Please download the synthetic data below and put it into the corresponding file (./data/synthetic/). Then you can use the command below to train the model.
+
+```
+python run_nerf_exp.py --config config_synthetic.txt
+```
+
+### Real-World Data
+
+The configs of the real-world data are in the config_real-world.txt file. Please download the real-world data below and put it into the corresponding file (./data/real-world/). Then you can use the command below to train the model.
+
+```
+python run_nerf_exp.py --config config_real-world.txt
+```
+
+Notice that for real-world data experiement in the paper, we use the poses for the video rendering to render the novel view images.
+Please just replace the "test_poses" in line 853 of run_nerf_exp.py with "render_poses" to generate the novel view images (120 images in total).
+We use the no-reference image quality assessment metrics to evaluate the novel view images and blur view images together (120+30=150 images).
+
 
 ## Dataset
 Download the dataset [here](https://drive.google.com/drive/folders/1XhOEp4UdLL7EnDNyWdxxX8aRvzF53fWo?usp=sharing).
@@ -24,6 +53,8 @@ The structure is like original NeRF's llff data and the event data is in "event.
 
 ### Event Data:
 For easy reading, we transform the event stream in to event bins as event.pt file. You can use pytorch to load the file. The shape of the tensor is (view_number, bin_number, H, W) and each element means the number of the events (positive and negative indicate polarity).
+
+
 
 ## Original Data & Preproccesing
 ### Synthetic Data:
@@ -53,6 +84,8 @@ If you find this useful, please consider citing our paper:
   year={2023}
 }
 ```
+
+
 
 ## Acknowledgment
 
