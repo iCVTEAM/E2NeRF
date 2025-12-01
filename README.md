@@ -86,7 +86,8 @@ If you find this useful, please consider citing our paper:
 ```
 
 
-
 ## Acknowledgment
 
 The overall framework are derived from [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch/). We appreciate the effort of the contributors to these repositories.
+
+Building upon E<sup>2</sup>NeRF, we further leverage the spatiotemporal blur priors of events to achieve more efficient training and better rendering results. Please refer to our new work [E<sup>3</sup>NeRF](https://github.com/iCVTEAM/E3NeRF) for details.
