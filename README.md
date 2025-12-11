@@ -3,21 +3,21 @@ This is an official PyTorch implementation of the E<sup>2</sup>NeRF. Click [here
 
 
 
-## Method Overview
+## 1. Method Overview
 
 ![](./figure.png)
 
 
 
-## Installation
+## 2. Installation
 The code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) and use the same environment.
 Please refer to its github [website](https://github.com/yenchenlin/nerf-pytorch) for the environment installation.
 
 
 
-## Code
+## 3. Code
 
-### Synthetic Data
+### 3.1 Synthetic Data
 
 The configs of the synthetic data are in the config_synthetic.txt file. Please download the synthetic data below and put it into the corresponding file (./data/synthetic/). Then you can use the command below to train the model.
 
@@ -25,7 +25,7 @@ The configs of the synthetic data are in the config_synthetic.txt file. Please d
 python run_nerf_exp.py --config config_synthetic.txt
 ```
 
-### Real-World Data
+### 3.2 Real-World Data
 
 The configs of the real-world data are in the config_real-world.txt file. Please download the real-world data below and put it into the corresponding file (./data/real-world/). Then you can use the command below to train the model.
 
@@ -38,32 +38,32 @@ Please just replace the "test_poses" in line 853 of run_nerf_exp.py with "render
 We use the no-reference image quality assessment metrics to evaluate the novel view images and blur view images together (120+30=150 images).
 
 
-## Dataset
+## 4. Dataset
 Download the dataset [here](https://drive.google.com/drive/folders/1XhOEp4UdLL7EnDNyWdxxX8aRvzF53fWo?usp=sharing).
 The dataset contains the "data" for training and the "original data".
 
-### Synthetic Data: 
+### 4.1 Synthetic Data: 
 For the file of each scene, there are training images in the "train" file and the corresponding event data "events.pt". The ground truth images are in the "test" file.
 
 Like in original NeRF, the training and testing poses are in the "transform_train.json" file and "transform_test.json" file.
 Notice that at the test time, we use the first pose of each view in "transform_test.json" to render the test images and the Ground Truth images are also rendered at this pose.
 
-### Real-World Data: 
+### 4.2 Real-World Data: 
 The structure is like original NeRF's llff data and the event data is in "event.pt". 
 
-### Event Data:
+### 4.3 Event Data:
 For easy reading, we transform the event stream in to event bins as event.pt file. You can use pytorch to load the file. The shape of the tensor is (view_number, bin_number, H, W) and each element means the number of the events (positive and negative indicate polarity).
 
 
 
-## Original Data & Preproccesing
-### Synthetic Data:
+## 5. Original Data & Preproccesing
+### 5.1 Synthetic Data:
 There are original images for synthesizing the blurry image and the code. Besides, we supply the original event data generated from v2e. We also provide the code to transform the ".txt" event to "events.pt" for E<sup>2</sup>NeRF training.
 
-### Real-World Data:
+### 5.2 Real-World Data:
 We supply the original ".aedat4" data captured by davis346 and the processing code in the file. We also convert the event data into events.pt for training. 
 
-### EDI:
+### 5.3 EDI:
 We update the EDI code in the repository. 
 You can use this code to deblur the images in the "train" file with corresponding events.pt data.
 And the deblurred images are saved at "images_for_colmap" file.
